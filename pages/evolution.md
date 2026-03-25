@@ -21,10 +21,7 @@ The first classes at McGill College (now McGill University) were held in 1829 in
 
 McGill's initial burst of expansion in its early years slowed in the 1930s during the depression. In the 1940s, the University was too involved in World War II to be concerned with its growing needs. After the War, the enrolment of the University increased dramatically and the University found itself in need of space. A period of expansion ensued which lasted through the 1960s and gave McGill such structures as McConnell Engineering (1958), the Otto Maass Chemistry Building (1963), the Leacock Building (1963), the McIntyre Medical Sciences Building (1965), the McLennan Library (1967), and Burnside Hall (1969).
 
-{% include index/carouselearlymcgill.html title="The Campus: Early Year" %}
-
-
-{% include index/carousel1930.html title="The Campus: 1930s-1960s" %}
+{% include index/carousel1930.html title="The Campus: 1930s-1960s" id="carousel1930" %}
 
 
 ## The Campus Today

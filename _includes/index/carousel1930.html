@@ -42,7 +42,7 @@
 {%- comment -%}
   MANUAL OBJECT SELECTION FOR OUR CAROUSEL
 {%- endcomment -%}
-{%- assign selected_ids = "e001|e002|e003|e004|e005|e006|e007|e008|e009|e010|e011|e012|e013|e015|e016|e017|e018|e019|e020" | split: "|" -%}
+{%- assign selected_ids = "e021|e022|e023|e024|e025|e026|e027|e028|e029|e030|e031|e032|e033|e034|e035|e036|e037" | split: "|" -%}
 
 
 {% if include.child-objects == true %}
@@ -69,7 +69,7 @@
    Set up carousel div
 {%- endcomment -%}
 <style>
-   #imageCarousel .carousel-item {
+   #{{ include.id }} .carousel-item {
        height: {{ include.height | remove: 'px' | strip | default: '300' }}px;
    }
 </style>
@@ -90,18 +90,18 @@
        </{{ include.heading_level | default: 'h2' | strip }}>
        {% endif %}
       
-       <div id="imageCarousel" class="carousel slide bg-dark rounded mb-3" data-bs-ride="carousel">
+       <div id="{{ include.id }}" class="carousel slide" bg-dark rounded mb-3" data-bs-ride="carousel">
            <div id="carouselIndicators" class="carousel-indicators"></div>
            <div id="carouselInner" class="carousel-inner"></div>
 
 
-           <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+           <button class="carousel-control-prev" type="button" data-bs-target="#{{ include.id }}" data-bs-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Previous</span>
            </button>
 
 
-           <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+           <button class="carousel-control-next" type="button" data-bs-target="#{{ include.id }}" data-bs-slide="next">
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Next</span>
            </button>
@@ -160,7 +160,7 @@ for (let i = 0; i < {{ carousel-items | size | at_most: carousel-max }}; i++) {
    }
 
 
-   indicator = `<button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="${i}"
+   indicator = `<button type="button" data-bs-target="#{{ include.id }}" data-bs-slide-to="${i}"
        ${ i == 0 ? 'class="active" aria-current="true"' : '' }
        aria-label="Slide ${i}"></button>`;
 
