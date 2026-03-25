@@ -1,0 +1,4 @@
+field,display_name,search
+date_built,Date,true
+architect,Architect(s),true
+area,Location,true

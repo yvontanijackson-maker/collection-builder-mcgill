@@ -1,0 +1,27 @@
+---
+# Default home page with boxes providing collection stats
+layout: page
+---
+<div class="row">
+
+  <div class="col-md-8">
+
+    {% include index/description.html %}
+    {% include index/carousel.html title="Featured Buildings" %}
+    
+  </div>
+  <div class="col-md-4">  
+
+    {% include index/time.html %}
+
+    {% include index/featured-terms.html field="area" title="Location" btn-color="outline-secondary" %}
+    
+
+  </div>
+  <div class="col-md-12">
+
+    {% include index/data-download.html %}
+
+  </div>
+
+</div>

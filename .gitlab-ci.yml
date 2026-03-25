@@ -1,0 +1,110 @@
+stages:
+  - lint
+  - build
+  - release
+  - deploy
+
+variables:
+  JEKYLL_ENV: "production"
+  # CB Template CSV validation settings
+  CB_ITEMS_CSV: "_data/items.csv"
+  CB_REQUIRED_HEADERS: "objectid,title"   # comma-separated required columns
+
+# --------------------------------------------------------------------
+# LINT STAGE
+# --------------------------------------------------------------------
+lint:
+  image: ruby:3.1
+  stage: lint
+  tags:
+    - redhat9
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  before_script:
+    - apt-get update && apt-get install -y build-essential git
+    - gem install bundler jekyll
+    - bundle install
+  script:
+    - echo "==> basic lint / sanity checks..."
+    - ruby -ryaml -e 'YAML.load_file(".gitlab-ci.yml")'; echo "YAML OK"
+    - echo "==> jekyll doctor (lint)..."
+    - jekyll doctor || true
+
+
+# --------------------------------------------------------------------
+# BUILD STAGE
+# --------------------------------------------------------------------
+build:
+  image: ruby:3.1
+  stage: build
+  tags:
+    - redhat9
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME =~ /^libraries-digital-collection-.*$/'
+  needs: ["lint"]
+  artifacts:
+    when: always
+    expire_in: 14 days
+    paths:
+      - _site
+      - build-report.txt
+      - build.log
+  before_script:
+    - apt-get update && apt-get install -y build-essential git
+    - gem install bundler jekyll
+    - bundle install
+  script:
+    - bash ci/build_check.sh
+    - cat build-report.txt
+
+# --------------------------------------------------------------------
+# TAG STAGE
+# --------------------------------------------------------------------
+create_tag:
+  stage: release
+  image: alpine:latest
+  needs: ["build"]
+  rules:
+    # Only run on pushes to mcgill (i.e., when an MR is merged into mcgill)
+    - if: '$CI_COMMIT_BRANCH == "mcgill" && $CI_PIPELINE_SOURCE == "push"'
+  script:
+    - apk add --no-cache git
+
+# --------------------------------------------------------------------
+# DEPLOY STAGE
+# --------------------------------------------------------------------
+
+# QA deploy – manual from main branch
+deploy_qa:
+  stage: deploy
+  needs: ["build"]
+  environment:
+    name: qa
+    url: https://qa-digital.library.mcgill.ca     # <-- change to your QA URL
+  variables:
+    DEPLOY_ENV: "dev"
+    JEKYLL_ENV: "production"
+  rules:
+    # Run only for tags, not branch pipelines
+    - if: '$CI_COMMIT_TAG'
+      when: manual
+  script:
+    - echo "Building to QA..."
+    - bash ci/build_check.sh
+    - cat build-report.txt
+
+# PROD deploy – manual, recommended from tags
+deploy_prod:
+  stage: deploy
+  needs: ["deploy_qa"]
+  environment:
+    name: production
+    url: https://digital.library.mcgill.ca   # <-- change to your PROD URL
+  rules:
+    # Run only for tags, not branch pipelines
+    - if: '$CI_COMMIT_TAG'
+      when: manual
+  script:
+    - echo "Deploying to PROD..."
+    - echo "PROD deploy step not yet implemented"

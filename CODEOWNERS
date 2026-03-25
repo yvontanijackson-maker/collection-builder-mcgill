@@ -1,0 +1,5 @@
+*                @lts
+/.gitlab-ci.yml  @lts
+/.gitignore      @lts
+/CODEOWNERS      @lts
+/ci              @lts

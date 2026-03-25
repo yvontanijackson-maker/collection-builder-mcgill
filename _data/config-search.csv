@@ -1,0 +1,10 @@
+field,index,display
+title,true,true
+date_built,true,true
+architect,true,true
+description,true,false
+area,true,false
+campus,true,false
+extension_architect,true,true
+donor,true,true
+status, true,false
