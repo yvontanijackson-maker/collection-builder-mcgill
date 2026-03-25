@@ -23,9 +23,9 @@ McGill's initial burst of expansion in its early years slowed in the 1930s durin
 
 {% include index/carouselearlymcgill.html title="The Campus: Early Year" %}
 
-{% comment %}
+
 {% include index/carousel1930.html title="The Campus: 1930s-1960s" %}
-{%- endcomment -%}
+
 
 ## The Campus Today
 
