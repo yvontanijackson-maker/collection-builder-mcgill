@@ -2,8 +2,8 @@
 title: The History of Macdonald Campus
 layout: about
 permalink: /macdonald.html
-about-featured-image: 
-position: bottom
+about-featured-image: cb020_01
+position: center
 heading: The Evolution of McGill's Macdonald College and Campus
 sub-heading: From its Early Beginnings till Now
 padding: 1em

@@ -1,7 +1,7 @@
 ---
 title: Timeline
-layout: timeline
-permalink: /timeline.html
+layout: page-full-width
+permalink: /timelinejs.html
 ---
 
-## Collection Timeline
+{% include feature/timelinejs.html %}

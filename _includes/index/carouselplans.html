@@ -42,7 +42,7 @@
 {%- comment -%}
   MANUAL OBJECT SELECTION FOR OUR CAROUSEL
 {%- endcomment -%}
-{%- assign selected_ids = "e021|e022|e023|e024|e025|e026|e027|e028|e029|e030|e031|e032|e033|e034|e035|e036|e037" | split: "|" -%}
+{%- assign selected_ids = "e054|e055|e056|e057|e058|e059|e060|e062|e063|e064|e065|e066" | split: "|" -%}
 
 
 {% if include.child-objects == true %}
@@ -69,7 +69,7 @@
    Set up carousel div
 {%- endcomment -%}
 <style>
-   #{{ include.id }} .carousel-item {
+   #imageCarousel .carousel-item {
        height: {{ include.height | remove: 'px' | strip | default: '300' }}px;
    }
 </style>
@@ -90,18 +90,18 @@
        </{{ include.heading_level | default: 'h2' | strip }}>
        {% endif %}
       
-       <div id="{{ include.id }}" class="carousel slide" bg-dark rounded mb-3" data-bs-ride="carousel">
-           <div id="{{ include.id }}Indicators" class="carousel-indicators"></div>
-           <div id={{ include.id }}Inner" class="carousel-inner"></div>
+       <div id="imageCarousel" class="carousel slide bg-dark rounded mb-3" data-bs-ride="carousel">
+           <div id="carouselIndicators" class="carousel-indicators"></div>
+           <div id="carouselInner" class="carousel-inner"></div>
 
 
-           <button class="carousel-control-prev" type="button" data-bs-target="#{{ include.id }}" data-bs-slide="prev">
+           <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Previous</span>
            </button>
 
 
-           <button class="carousel-control-next" type="button" data-bs-target="#{{ include.id }}" data-bs-slide="next">
+           <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Next</span>
            </button>
@@ -118,7 +118,7 @@
 <script>
 /* add item data */
 // title,objectid,image_thumb/small
-var carouselItems_{{ include.id }} = [
+var carouselItems = [
 {% for c in carousel-items %}
 [
  {{ c.title | escape | jsonify }},
@@ -136,12 +136,12 @@ var carouselItems_{{ include.id }} = [
 
 
 /* shuffle items */
-carouselItems_{{ include.id }}.sort(function() { return 0.5 - Math.random() });
+carouselItems.sort(function() { return 0.5 - Math.random() });
 
 
 /* add items to carousel */
-var carousel = document.getElementById("{{ include.id }}Inner");
-var carouselIndicators = document.getElementById("{{ include.id }}Indicators");
+var carousel = document.getElementById("carouselInner");
+var carouselIndicators = document.getElementById("carouselIndicators");
 var slides = "";
 var indicators = "";
 var itemImg, itemLink;
@@ -150,27 +150,27 @@ var itemImg, itemLink;
 for (let i = 0; i < {{ carousel-items | size | at_most: carousel-max }}; i++) {
 
 
-   itemImg = carouselItems_{{ include.id }}[i][2];
+   itemImg = carouselItems[i][2];
 
 
-   if (carouselItems_{{ include.id }}[i][3]) {
-       itemLink = '{{ "/items/" | relative_url }}' + carouselItems_{{ include.id }}[i][3] + '.html#' + carouselItems_{{ include.id }}[i][1];
+   if (carouselItems[i][3]) {
+       itemLink = '{{ "/items/" | relative_url }}' + carouselItems[i][3] + '.html#' + carouselItems[i][1];
    } else {
-       itemLink = '{{ "/items/" | relative_url }}' + carouselItems_{{ include.id }}[i][1] + '.html ' ;
+       itemLink = '{{ "/items/" | relative_url }}' + carouselItems[i][1] + '.html';
    }
 
 
-   indicator = `<button type="button" data-bs-target="#{{ include.id }}" data-bs-slide-to="${i}"
+   indicator = `<button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="${i}"
        ${ i == 0 ? 'class="active" aria-current="true"' : '' }
        aria-label="Slide ${i}"></button>`;
 
 
    slide = `<div class="carousel-item py-2${ i == 0 ? ' active' : '' }">
        <img class="d-block h-100 mx-auto lazyload"
-            alt="${carouselItems_{{ include.id }}[i][4]}"
+            alt="${carouselItems[i][4]}"
             data-src="${itemImg}">
        <div class="carousel-caption">
-           <h3 class="carousel-item-title text-white py-2 h6">${carouselItems_{{ include.id }}[i][0]}</h3>
+           <h3 class="carousel-item-title text-white py-2 h6">${carouselItems[i][0]}</h3>
            <a href="${itemLink}" class="btn btn-sm btn-{{ btn-color }}">{{ btn-text }}</a>
        </div>
    </div>`;
