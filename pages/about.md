@@ -1,11 +1,11 @@
 ---
 title: About
-layout: about
+layout: about-no-header
 permalink: /about.html
 # include CollectionBuilder info at bottom
 credits: true
 # featured-image value can be one objectid for a photo object in this collection, a relative path to an image in this project, or a full url to any image. If left blank, no featured image will appear at top of About page.
-about-featured-image: demo_031
+about-featured-image:
 # set background-position for featured image, "center", "top", "bottom"
 position: bottom
 # major heading to display over featured image
@@ -18,22 +18,41 @@ padding: 6em
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-## About CollectionBuilder CSV
+## About the 2026 Redesign
 
-This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
+The History of McGill University's Buildings is an index showcasing the architectural development of the downtown and Macdonald campuses. Originally titled Virtual McGill: Campuses and Buildings, the site retains most of its original content, with minor corrections and additions to enhance usability while preserving its integrity.
 
-CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
+The site was migrated to Collection Builder in 2026. First conceived in 1996 by staff at McGill University Libraries working with the Canadian Architecture Collection, it was developed with the support of McGill students.
 
-- a CSV of collection metadata
-- a folder of images, PDFs, audio, or video files
+Currently, XX buildings are indexed. Some records may not include images or descriptions, as this information was unavailable at the time of migration.
 
-Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
-The resulting static site can be hosted on any basic web server.
+### Copyright Information
 
-[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
-See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
 
-{% include feature/image.html objectid="demo_001" width="75" %} 
 
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+## Original Virtual McGill Project Overview
+
+
+{% include feature/image.html objectid="assets/img/Virtual_McGill_Library_Staff.jpg" %}
+
+Virtual McGill: Campuses and Buildings has been developed as one of several documentary projects honouring the University's 175th anniversary. The project was conceived by the staff of the Canadian Architecture Collection (CAC), McGill University Libraries. It was implemented by McGill students with funding from the Department of Canadian Heritage.
+
+The purpose of Virtual McGill is to give McGill students, past, present and future, a sense of the history of the individual campus buildings, as well as of the programs which were or are housed in them. The intention is also to share the history of McGill buildings, many of which once served as private residences of prominent Montreal citizens, with researchers, architects, and the community at large. Future expansions of the Virtual McGill web site will aim to arrive at a comprehensive architectural history of the University and its downtown and Macdonald campuses.
+
+In addition to CAC-held photographs and drawings, the project has extensively drawn on the resources of other University repositories and affiliates. These included the University Archives, the Instructional Communications Centre, Physical Resources and the Notman Photographic Archive of McCord Museum of Canadian History. We are grateful to the above units for sharing with us their collections, as well as their equipment and expertise. A very particular word of thanks goes to the University Archives, since approximately three quarters of all images used in this project come from their collections and were digitized with their equipment. For textual information on university buildings, we have drawn on CAC files and the existing university and city publications, most notably those of Dr. Stanley Frost, John Bland and Donald Mackay, whose research has been invaluable to us. We encourage all interested parties to share with us their comments and additional information.
+
+### Original Site Credits
+
+#### Preliminary Concept (1994-95):
+Irena Murray, David Johnson and Debbie Miller
+
+#### Project Team
+- Irena Murray: Head, Department of Rare Books and Special Collections / Curator, Canadian Architecture Collection: Project Leader and Editor
+- Rebecca Michaels: Photography, Imaging, Research and Building Descriptions
+- David Johnson: Web Design, Systems Analysis, Website Direction and Maintenance
+- Odile Bourbigot: Translation into French
+- Glenna Vinokur: Web Design and Development, Graphic Design
+- Sylvain Pimparé: Image Conversion
+- Daniella Rohan: Architectural Consulting
+
+
