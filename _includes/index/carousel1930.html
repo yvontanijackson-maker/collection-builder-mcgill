@@ -90,9 +90,9 @@
        </{{ include.heading_level | default: 'h2' | strip }}>
        {% endif %}
       
-       <div id="{{ include.id }}" class="carousel slide" bg-dark rounded mb-3" data-bs-ride="carousel">
+      <div id="{{ include.id }}" class="carousel slide bg-dark rounded mb-3" data-bs-ride="carousel">
            <div id="{{ include.id }}Indicators" class="carousel-indicators"></div>
-           <div id={{ include.id }}Inner" class="carousel-inner"></div>
+           <div id="{{ include.id }}Inner" class="carousel-inner"></div>
 
 
            <button class="carousel-control-prev" type="button" data-bs-target="#{{ include.id }}" data-bs-slide="prev">

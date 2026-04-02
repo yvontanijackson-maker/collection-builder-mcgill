@@ -1,6 +1,6 @@
 ---
 title: McGill as it Might Have Been
-layout: about
+layout: about-no-header
 permalink: /plans.html
 about-featured-image: 
 position: bottom
@@ -10,6 +10,8 @@ padding: 6em
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
+
+## McGill as it Might Have Been
 
 {% include index/carouselplans.html title="Proposed Plans and Buildings" %}
 

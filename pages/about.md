@@ -22,7 +22,7 @@ padding: 6em
 
 The History of McGill University's Buildings is an index showcasing the architectural development of the downtown and Macdonald campuses. Originally titled Virtual McGill: Campuses and Buildings, the site retains most of its original content, with minor corrections and additions to enhance usability while preserving its integrity.
 
-The site was migrated to Collection Builder in 2026. First conceived in 1996 by staff at McGill University Libraries working with the Canadian Architecture Collection, it was developed with the support of McGill students.
+The site was migrated to [Collection Builder](https://collectionbuilder.github.io/) in 2026; view the [original site from 1996 via the Internet Archive’s Wayback Machine](https://wayback.archive-it.org/22619/20240416132209/https://cac.mcgill.ca/campus/). First conceived in 1996 by staff at McGill University Libraries working with the Canadian Architecture Collection, it was developed with the support of McGill students.
 
 Currently, XX buildings are indexed. Some records may not include images or descriptions, as this information was unavailable at the time of migration.
 
@@ -30,7 +30,7 @@ Currently, XX buildings are indexed. Some records may not include images or desc
 
 
 
-## Original Virtual McGill Project Overview
+##  Original Virtual McGill Project Overview (Direct Excerpt)
 
 
 {% include feature/image.html objectid="assets/img/Virtual_McGill_Library_Staff.jpg" %}
@@ -39,7 +39,7 @@ Virtual McGill: Campuses and Buildings has been developed as one of several docu
 
 The purpose of Virtual McGill is to give McGill students, past, present and future, a sense of the history of the individual campus buildings, as well as of the programs which were or are housed in them. The intention is also to share the history of McGill buildings, many of which once served as private residences of prominent Montreal citizens, with researchers, architects, and the community at large. Future expansions of the Virtual McGill web site will aim to arrive at a comprehensive architectural history of the University and its downtown and Macdonald campuses.
 
-In addition to CAC-held photographs and drawings, the project has extensively drawn on the resources of other University repositories and affiliates. These included the University Archives, the Instructional Communications Centre, Physical Resources and the Notman Photographic Archive of McCord Museum of Canadian History. We are grateful to the above units for sharing with us their collections, as well as their equipment and expertise. A very particular word of thanks goes to the University Archives, since approximately three quarters of all images used in this project come from their collections and were digitized with their equipment. For textual information on university buildings, we have drawn on CAC files and the existing university and city publications, most notably those of Dr. Stanley Frost, John Bland and Donald Mackay, whose research has been invaluable to us. We encourage all interested parties to share with us their comments and additional information.
+In addition to CAC-held photographs and drawings, the project has extensively drawn on the resources of other University repositories and affiliates. These included the University Archives, the Instructional Communications Centre, Physical Resources and the Notman Photographic Archive of McCord Museum of Canadian History. We are grateful to the above units for sharing with us their collections, as well as their equipment and expertise. A very particular word of thanks goes to the University Archives, since approximately three quarters of all images used in this project come from their collections and were digitized with their equipment. For textual information on university buildings, we have drawn on CAC files and the existing university and city publications, most notably those of Dr. Stanley Frost, John Bland and Donald Mackay, whose research has been invaluable to us. 
 
 ### Original Site Credits
 

@@ -15,7 +15,7 @@ padding: 6em
 
 The first classes at McGill College (now McGill University) were held in 1829 in Burnside Place, James McGill's country home. In 1843, the University constructed its first buildings, the central and east wings of the present Arts Building. When Sir William Dawson became principal of the University in 1855, he took it upon himself to landscape the campus and repair its buildings. Before long, he had recruited the aid of several of Montreal's wealthiest men, among them Sir William Molson, Sir William Macdonald, Sir Peter Redpath, and Lord Strathcona. These upstanding citizens all donated liberally to the University by giving much needed property, funding, and buildings, including the Redpath Museum (1880), Macdonald Physics Building (1893), the Redpath Library (1893), the Macdonald Chemistry Building (1896), the Macdonald Engineering Building (1907), and the Strathcona Medical Building (1907 - now the Strathcona Anatomy and Dentistry Building). The period of expansion they created continued through the 1920s, by the end of which McGill was a University of some renown.
 
-{% include index/carouselearlymcgill.html title="The Campus: Early Years" %}
+{% include index/carouselearlymcgill.html title="The Campus: Early Years" id="carouselearlymcgill" %}
 
 ## The Campus: 1930s-1960s
 
@@ -23,7 +23,8 @@ McGill's initial burst of expansion in its early years slowed in the 1930s durin
 
 {% include index/carousel1930.html title="The Campus: 1930s-1960s" id="carousel1930" %}
 
+## The Campus: 1970s-1990s
 
-## The Campus Today
+During this time, the Campus features a mixture of old and new structures. The need to expand caused the University to take some of the older buildings down and replace them with edifices offering more space. An effort is being made to find new uses for older structures, such as the Foster Building which is being incorporated into the new Wong Chemical Engineering Building. The campus as it always has been, is full of students socializing, going to classes, and taking exams.
 
-Today, the Campus features a mixture of old and new structures. The need to expand caused the University to take some of the older buildings down and replace them with edifices offering more space. An effort is being made to find new uses for older structures, such as the Foster Building which is being incorporated into the new Wong Chemical Engineering Building. The campus as it always has been, is full of students socializing, going to classes, and taking exams.
+{% include index/carousel1970.html title="The Campus: 1970s-1990s" id="carousel1970" %}
