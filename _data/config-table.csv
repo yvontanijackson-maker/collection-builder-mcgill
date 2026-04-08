@@ -1,5 +1,6 @@
 field,display_name
 title,Title
-date,Date
-description,Description
-subject,Subjects
+architect,Architects(s)
+date_built,Date Built
+status,Status
+campus,Campus

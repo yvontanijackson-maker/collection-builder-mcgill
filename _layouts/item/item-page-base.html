@@ -18,16 +18,21 @@ item-meta: true
     </h2>
 
     <div class="row justify-content-center">
-        <div class="col-12 col-md-10">
+        <div class="col-md-6">
 
         {{ content }}
 
         </div>
 
-        <div class="col-12 col-md-10" id="metadata">
+        <div class="col-md-6" id="metadata">
 
             {% include item/metadata.html %}
 
+        </div>
+
+        <div class="col 12 col-md-10">
+            <h3 class="field-title">Description</h3>
+            <p class="field-value">{{ page.description_linebreaks }}</p>
         </div>
 
         <div class="col-md-5 py-4">

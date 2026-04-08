@@ -10,7 +10,6 @@ date_completed,Building Completed Date
 status,Status
 date_demolished,Demolition Date
 current_use,Current Use
-description,Description,,,DCTERMS.description,description
 subject,Subjects,true,,DCTERMS.subject,keywords
 campus,Campus
 area,Location,,,,contentLocation

@@ -1,7 +1,5 @@
 field,display_name,btn,hidden,sort_name,facet_name
-date_built,Date,,,Date Created
+date_built,Date Built,,,Date Built
 description,,,true,
 architect,Architect(s),,,
-subject,,true
-area,,true,,,Location Depicted
-identifier,,,true,Identifier
+area,,true,,,Location
