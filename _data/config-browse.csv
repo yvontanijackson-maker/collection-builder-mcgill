@@ -1,5 +1,7 @@
 field,display_name,btn,hidden,sort_name,facet_name
+alternative_title,Alternative Title,,,
 date_built,Date Built,,,Date Built
 description,,,true,
 architect,Architect(s),,,
-area,,true,,,Location
+area,,,true,Location
+campus,,true,,Campus

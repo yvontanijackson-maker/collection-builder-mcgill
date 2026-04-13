@@ -80,9 +80,11 @@ layout: default
     <div id="about-contents-wrapper">
         {{ content }}
     </div>
+    {% comment %}
     {% if page.credits == true %}
     <div id="credits-contents-wrapper">
         {% include cb/credits.html %}
     </div>
     {% endif %}
+    {%- endcomment -%}
 </div>

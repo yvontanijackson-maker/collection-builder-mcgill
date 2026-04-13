@@ -1,6 +1,6 @@
 ---
 title: The History of Macdonald Campus
-layout: about
+layout: about-no-header
 permalink: /macdonald.html
 about-featured-image: cb020_01
 position: center
@@ -10,6 +10,7 @@ padding: 1em
 # Edit the markdown on in this file to describe your collection
 # Look in _includes/feature for options to easily add features to the page
 ---
+## The Evolution of McGill's Macdonald College and Campus
 
 Macdonald College, located in Ste. Anne de Bellevue, was founded in 1905 due to the beneficence of Sir William Macdonald, who donated many of the buildings on the downtown campus. He purchased many farms in the area, totaling 800 acres, and hired the architects Hutchison and Wood to design the many Romanesque style buildings that comprised the original campus. Among these were the Main Building for the Faculty of Agriculture and the library, both the Biology and Chemistry Buildings, the F.P. Jones Building for the Canadian Department of Agricultural Animal Pathology, the Agriculture Building for the Departments of Plant and Animal Sciences, the Barton Building which served as a barn, and the Poultry Building. All of these units together allowed the college to offer a complete and rigorous program that taught and researched several aspects of farm technology. Macdonald also provided a power house and several residences for both staff and students, such as Brittain Hall, Glenaladale House, named for Macdonald's family home, the Walter M. Stewart House, Stewart Hall, which contained the main dining hall, and Stewart Park, a row house that was the home of the College's first deans. The Macdonald College was one of the most magnanimous gifts ever made to McGill.  
 

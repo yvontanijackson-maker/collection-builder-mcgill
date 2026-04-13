@@ -1,18 +1,18 @@
 ---
-# "Timeline" page
+# "browsearchitect" page
 layout: page
 custom-foot: js/timeline-js.html
 ---
-{%- assign field = site.data.theme.timeline-field | default: page.timeline-field | default: "date" -%}
+{%- assign field = site.data.theme.timeline-field | default: page.timeline-field | default: "architect" -%}
 {% if site.data.theme.timeline-child-objects == true %}
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
 {% else %}
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid and item.parentid == nil' -%}
 {% endif %}
-{%- assign items = items | where_exp: 'item','item.date_built' | sort: field -%}
+{%- assign items = items | where_exp: 'item','item.architect' | sort: field -%}
 {%- assign raw-dates = items | map: 'architect' | compact | uniq -%}
 {%- capture clean-years -%}{% for date in raw-dates %}{% if date contains "-" %}{{ date | strip | split: "-" | first }}{% elsif date contains "/" %}{{ date | strip | split: "/" | last }}{% else %}{{ date | strip }}{% endif %}{% unless forloop.last %};{% endunless %}{%- endfor -%}{%- endcapture -%}
-{%- assign uniqueYears = clean-years | replace: ";;",";" | split: ";" | compact | uniq | sort -%}
+{%- assign uniqueYears = clean-years | split: ";" | compact | uniq | sort -%}
 {%- if site.data.theme.year-navigation -%}
 {%- assign navYears = site.data.theme.year-navigation | split: ";" -%}
 {%- elsif site.data.theme.year-nav-increment -%}
@@ -24,7 +24,7 @@ custom-foot: js/timeline-js.html
 {%- if navYears -%}
 <div class="dropdown float-end" id="year-nav">
     <button class="btn btn-primary dropdown-toggle" type="button" id="yearButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Year
+        Architect(s)
     </button>
     <div class="dropdown-menu" aria-labelledby="yearButton">
         {% for y in navYears %}
@@ -35,7 +35,9 @@ custom-foot: js/timeline-js.html
 
 {{ content }}
 
+{% comment %}
 <h3><a href="#y{{ uniqueYears | first }}">{{ uniqueYears | first }}</a> to <a href="#y{{ uniqueYears | last }}">{{ uniqueYears | last }}</a></h3>
+{% endcomment %}
 
 <table id="timeline" class="table table-striped">
     <tbody>

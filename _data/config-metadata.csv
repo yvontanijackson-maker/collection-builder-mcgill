@@ -1,5 +1,6 @@
 field,display_name,browse_link,external_link,dc_map,schema_map
 title,Title,,,DCTERMS.title,headline
+alternative_title,Alternative Title
 architect,Architect(s),,,DCTERMS.creator,creator
 extension_architect,Architect(s) for Extension
 donor,Donor

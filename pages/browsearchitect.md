@@ -1,7 +1,7 @@
 ---
 title: Browse by Architect(s)
-layout: timeline
-permalink: /architect.html
+layout: architects
+permalink: /architects.html
 # a timeline visualization will be added below the content in this file
 ---
 

@@ -32,7 +32,10 @@ item-meta: true
 
         <div class="col 12 col-md-10">
             <h3 class="field-title">Description</h3>
-            <p class="field-value">{{ page.description_linebreaks }}</p>
+                {{ page.description_linebreaks
+                   | replace: '\n', '</p><p>'
+                   | prepend: '<p>'
+                   | append: '</p>' }}
         </div>
 
         <div class="col-md-5 py-4">
