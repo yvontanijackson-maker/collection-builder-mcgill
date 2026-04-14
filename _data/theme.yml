@@ -11,7 +11,7 @@
 featured-image: assets/img/banner03.png
 featured-image-alt-text: collage of buildings featured in the collection # add alt text if using url for featured-image (objectid will be automatic from metadata)
 # optional: add extra padding around collection title for a larger image feature. 
-home-title-y-padding: 10em # the margin from the top your title portion will appear.
+home-title-y-padding: 8em # the margin from the top your title portion will appear.
 # optional: change position of background image, center, top, bottom
 home-banner-image-position: center # Default is top
 
@@ -125,6 +125,6 @@ icons:
    icon-panorama: image-alt
    icon-compound-object: building-fill 
    icon-multiple: building-fill
-   icon-default: file-earmark # fall back icon
+   icon-default: building-fill # fall back icon
    icon-back-to-top: arrow-up-square
 
